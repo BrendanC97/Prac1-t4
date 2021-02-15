@@ -2,7 +2,6 @@
 package com.stir.cscu9t4practical1;
 
 import java.util.Calendar;
-// Just testing
 public class Entry {
   private String name;
   private Calendar dateAndTime;
@@ -11,14 +10,15 @@ public class Entry {
   public Entry (String n, int d, int m, int y, int h, int min, int s, float dist) {
     name = n;
     Calendar inst = Calendar.getInstance();
-    inst.set(y,m-1,d,h,min,s);
+    inst.set(y,m-1,d,h,m,s);
     dateAndTime = inst;
     distance = dist;
   } //constructor
-  
+
+
   public String getName () {
     return name;
-  } //getName
+  }
   
   public int getDay () {
     return dateAndTime.get(Calendar.DATE);
@@ -55,5 +55,7 @@ public class Entry {
              +getDay()+"/"+getMonth()+"/"+getYear()+"\n";
    return result;
   } //getEntry
-   
+
+
+
 } // Entry
